@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>แก๊งเพื่อนของผม</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3efff;
+    color: #444;
+}
+
+/* HEADER */
+header {
+    background: #7355d6;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+/* NAV */
+nav {
+    background: white;
+    text-align: center;
+    padding: 18px;
+}
+
+nav button {
+    background: #eee8ff;
+    color: #6045ad;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #7355d6;
+    color: white;
+}
+
+/* SECTION */
+section {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* ข้อมูลแต่ละคน */
+.person {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px #d8d2eb;
+}
+
+.person img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #9b87ed;
+}
+
+.person h2 {
+    color: #6045ad;
+    font-size: 32px;
+}
+
+.person p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.info {
+    background: #eee8ff;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.info h3 {
+    color: #6045ad;
+}
+
+/* FOOTER */
+footer {
+    background: #6045ad;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>👥 แก๊งเพื่อนของผม</h1>
+    <p>✨ กดชื่อเพื่อดูข้อมูลของแต่ละคน ✨</p>
+</header>
+
+<nav>
+    <button onclick="showPerson('wa')">😊 วา</button>
+    <button onclick="showPerson('choda')">😎 โชดา</button>
+    <button onclick="showPerson('note')">🎮 โน็ต</button>
+</nav>
+
+<section>
+
+    <!-- วา -->
+    <div id="wa" class="person">
+
+        <img src="วา.jpg" alt="วา">
+
+        <h2>😊 วา</h2>
+
+        <p>
+            เป็นคนสบาย ๆ เข้ากับเพื่อนได้ง่าย
+            และชอบทำกิจกรรมกับเพื่อน
+        </p>
+
+        <div class="info">
+            <h3>🌟 ลักษณะนิสัย</h3>
+            <p>
+                เป็นคนคุยง่าย เป็นกันเอง
+                และชอบทำกิจกรรมสนุก ๆ กับเพื่อน
+            </p>
+
+            <h3>📱 แอปที่เข้าเป็นประจำ</h3>
+            <p>🎵 TikTok</p>
+        </div>
+
+    </div>
+
+
+    <!-- โชดา -->
+    <div id="choda" class="person">
+
+        <img src="โชดา.jpg" alt="โชดา">
+
+        <h2>😎 โชดา</h2>
+
+        <p>
+            เป็นคนร่าเริง เข้ากับเพื่อนได้ง่าย
+            และชอบพูดคุยกับเพื่อน
+        </p>
+
+        <div class="info">
+            <h3>🌟 ลักษณะนิสัย</h3>
+            <p>
+                เป็นคนเป็นกันเอง คุยสนุก
+                และมีอารมณ์ขัน
+            </p>
+
+            <h3>📱 แอปที่เข้าเป็นประจำ</h3>
+            <p>🎵 TikTok</p>
+        </div>
+
+    </div>
+
+
+    <!-- โน็ต -->
+    <div id="note" class="person">
+
+        <img src="โน็ต.jpg" alt="โน็ต">
+
+        <h2>🎮 โน็ต</h2>
+
+        <p>
+            เป็นคนเฮฮา ชอบพูดคุยกับเพื่อน
+            และชอบสร้างเสียงหัวเราะให้กับกลุ่ม
+        </p>
+
+        <div class="info">
+            <h3>🌟 ลักษณะนิสัย</h3>
+            <p>
+                เป็นคนอารมณ์ดี คุยสนุก
+                และชอบเล่นเกม
+            </p>
+
+            <h3>📱 แอปที่เข้าเป็นประจำ</h3>
+            <p>🎵 TikTok</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    💜 My Friends © 2026
+</footer>
+
+
+<script>
+
+function showPerson(person) {
+
+    // ซ่อนทุกคน
+    document.getElementById("wa").style.display = "none";
+    document.getElementById("choda").style.display = "none";
+    document.getElementById("note").style.display = "none";
+
+    // แสดงเฉพาะคนที่กด
+    document.getElementById(person).style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
